@@ -1,0 +1,22 @@
+/*ICON BAR*/
+.icon-bar {
+    height: 50%;
+    width: 90px;
+    text-align: center;
+    padding-top: 1%;
+    display: flex;
+}
+
+.icon-bar a {
+    padding: 16px;
+    margin-left: 30px;
+    display: block;
+    transition: all 0.3s ease;
+    color: rgb(119, 119, 119);
+    font-size: 36px;
+}
+
+.icon-bar a:hover {
+    background-color: #d6dbd6;
+}
+/*END ICON BAR*/
