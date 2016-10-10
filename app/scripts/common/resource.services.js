@@ -9,6 +9,7 @@
             GetAllUserProducts: { method: 'GET', isArray: true,url: appSettings.serverPath + "/getAllUserProducts"},
 
             GetOrdersBetween: { method: 'GET', isArray: true,url: appSettings.serverPath + "/getOrdersBetween/:from/:to"},
+            GetOrdersDetail: { method: 'GET', isArray: true,url: appSettings.serverPath + "/getAllDetails"},
 
             SaveOrder: { method: 'POST', url: appSettings.serverPath + "/addOrder"},
             SaveOrderDetail: { method: 'POST', url: appSettings.serverPath + "/addMultipleDetails"}          

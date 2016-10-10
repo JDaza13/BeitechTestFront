@@ -24,3 +24,11 @@
 .displayNone {
     display: none;
 }
+
+.orderItem:hover{
+    cursor: pointer;
+    padding: 2px;
+    margin-right: 2px;
+    transition: all 0.3s ease;
+    background-color:  rgb(200, 200, 200);
+}

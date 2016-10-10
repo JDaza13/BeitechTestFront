@@ -23,16 +23,28 @@
 	</div>		
 	<div class="col-md-6 col-lg-6">
 		<label>Results: </label>
-		<div ng-repeat="x in Orders">
+		<div ng-repeat="x in Orders" class="orderItem" ng-click="getDetail(x.id,x.trm)">
 			<h4>Order No. {{x.id}}</h4>
 			<h5>Address: {{x.address}}</h5>
 			<h6>TRM: {{x.trm}} USD</h6>
 			<h6>Date: {{x.date}}</h6>
 			<hr>
 		</div>
+		<hr>
 	</div>
 	<div class="col-md-6 col-lg-6">
-		<label>Details: </label>	
+		<label>Details: </label>
+		<h4>{{Detail.OrderId}}</h4>
+		<hr>
+		<div ng-repeat="x in Detail.items">
+			<h5>{{x.description}} (€{{x.price}})</h5>
+		</div>
+		<hr>
+		<div class="text-right">
+			<h6>EUR: {{Detail.TotalEUR}}</h6>
+			<h6>USD: {{Detail.TotalUSD}}</h6>
+		</div>
+		<hr>	
 	</div>
 	
 </div>
