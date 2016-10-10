@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="bower_components/Ventus/ventus.css" />
     <link rel="stylesheet" href="bower_components/toastr/toastr.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="styles/dxDataGrid/dx.common.css" />
+    <link rel="stylesheet" type="text/css" href="styles/dxDataGrid/dx.light.css" />
     
     <!-- endbower -->
     <!-- endbuild -->
@@ -29,6 +32,26 @@
         <div class="page-header">
           <h1>Beitech Test <small>FrontEnd section</small></h1>
         </div>
+          <div class="icon-bar">
+            <a class="active" href="#/home" data-toggle="tooltip" title="Go home!"><i class="fa fa-home"></i></a> 
+            <a href="#/newOrder" ><i class="fa fa-shopping-cart" data-toggle="tooltip" title="New oder..."></i></a> 
+            <a href="#/allOrders" ><i class="fa fa-list" data-toggle="tooltip" title="All orders..."></i></a>
+            <a 
+            href="https://github.com/JDaza13/BeitechTestFront" 
+            target="_blank" 
+            data-toggle="tooltip" 
+            title="Source code FrontEnd!">
+            <i class="fa fa-file-code-o"></i>
+            </a>
+            <a 
+            href="https://github.com/JDaza13/BeitechTestBack" 
+            target="_blank" 
+            data-toggle="tooltip" 
+            title="Source code Backend!">
+            <i class="fa fa-database"></i>
+            </a>            
+          </div>
+        <hr>
         <div ng-view="">
           
         </div>  
@@ -64,6 +87,16 @@
     <!-- endbower -->
     <!-- endbuild -->
 
+    <!--dxDataGrid scripts-->
+    <script type="text/javascript" src="scripts/dxDataGrid/jszip.min.js"></script>
+    <script type="text/javascript" src="scripts/dxDataGrid/globalize.js"></script>
+    <script type="text/javascript" src="scripts/dxDataGrid/dx.all.js"></script>
+    <script type="text/javascript" src="scripts/dxDataGrid/dx.all.de.js"></script>
+    <script type="text/javascript" src="scripts/dxDataGrid/dx.all.pt.js"></script>
+    <script type="text/javascript" src="scripts/dxDataGrid/dx.all.ru.js"></script>
+    <script type="text/javascript" src="scripts/dxDataGrid/dx.all.es-xl.js"></script>
+    <!--End dxDataGrid scripts-->
+
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/route.js"></script>
@@ -71,6 +104,8 @@
         <script src="scripts/common/common.services.js"></script>
         <script src="scripts/common/resource.services.js"></script>
         <script src="scripts/controllers/home.js"></script>
+        <script src="scripts/controllers/newOrder.js"></script>
+        <script src="scripts/controllers/allOrders.js"></script>
         <!-- endbuild -->
     <!-- Socket io-->
     <script src="/socket.io/socket.io.js"></script>

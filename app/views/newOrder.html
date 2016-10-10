@@ -1,0 +1,53 @@
+<div class="row" ng-init="init()">
+	<div class="col-md-6 col-lg-6">
+		<div class="form-group">
+		  <label for="sel1">Select client: </label>
+		  <select 
+		  class="form-control" 
+		  id="user" 
+		  ng-model="userSel"
+		  ng-change="GetProductsByUser();" 
+		  ng-options="item as item.userName for item in Users track by item.id">
+		    <option class="displayNone"></option>
+		  </select>
+		  <hr>		  
+		  <label for="address">Delivery address: </label>
+		  <input 
+		  class="form-control" 
+		  id="address" 
+		  ng-model="OrderAddress"/>
+		  <hr>
+		  <label for="date">Date: </label>
+		  <input 
+		  class="form-control"
+		  type="date" 
+		  id="date" 
+		  ng-model="OrderDate"/>
+		</div>
+	</div>
+	<div class="col-md-6 col-lg-6">
+		<label>Avaliable products: </label>
+		<ul>
+			<li ng-repeat="x in avalProducts">{{x.productName}} (€{{x.price}})</li>
+		</ul>
+		<hr>
+		<h4>EURO Currency</h4>
+		<a 
+		href="http://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml" 
+		target="_blank">
+		1 EUR = {{TRM.Rate}} USD
+		</a>
+	</div>
+	<div class="col-md-12 col-lg-12">
+		<label>Order: </label>
+		<div id="gridOrder" dx-data-grid="dataGridOrderOptions"></div>
+		<div class="text-right">
+			<h6>EUR: {{Summary.EUR}}</h6>
+			<h6>USD: {{Summary.USD}}</h6>
+		</div>
+		<hr>		
+		<button type="button" class="btn btn-primary btn-block" ng-click="SaveOrder();">Order now!</button>
+		<hr>
+	</div>
+
+</div>

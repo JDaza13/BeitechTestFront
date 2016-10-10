@@ -5,6 +5,7 @@ var app = null;
   app = angular
   .module('ajsApp', [
     'common.services',
+    'dx',
     'ngAnimate',
     'ngCookies',
     'ngResource',

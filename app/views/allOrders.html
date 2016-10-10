@@ -1,0 +1,38 @@
+<div class="row" ng-init="init()">
+	<div class="col-md-6 col-lg-6">
+		<label for="from">From: </label>
+		<input 
+		class="form-control"
+		type="date" 
+		id="from" 
+		ng-model="FechaDesde"/>
+		<hr>
+	</div>
+	<div class="col-md-6 col-lg-6">
+		<label for="to">To: </label>
+		<input 
+		class="form-control"
+		type="date" 
+		id="to" 
+		ng-model="FechaHasta"/>
+		<hr>
+	</div>
+	<div class="col-md-12 col-lg-12">
+		<button type="button" class="btn btn-primary btn-block" ng-click="init();">Get orders!</button>
+		<hr>
+	</div>		
+	<div class="col-md-6 col-lg-6">
+		<label>Results: </label>
+		<div ng-repeat="x in Orders">
+			<h4>Order No. {{x.id}}</h4>
+			<h5>Address: {{x.address}}</h5>
+			<h6>TRM: {{x.trm}} USD</h6>
+			<h6>Date: {{x.date}}</h6>
+			<hr>
+		</div>
+	</div>
+	<div class="col-md-6 col-lg-6">
+		<label>Details: </label>	
+	</div>
+	
+</div>
